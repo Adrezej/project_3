@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Phone Number Form</title>
+</head>
+<body>
+    <h1>Enter Your Phone Number and Name</h1>
+
+    <form action="/" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" pattern="\+\d{3}\d{2}\d{3}\d{3}" placeholder="+37367755314" required>
+
+
+
+        <button type="submit">Submit</button>
+    </form>
+    <script>
+    window.addEventListener('scroll', function() {
+        let header = document.querySelector('h1');
+        let scrolled = window.scrollY;
+        header.style.transform = 'translateY(' + scrolled * 0.3 + 'px)';
+    });
+</script>
+
+</body>
+</html>
